@@ -212,6 +212,7 @@
 13:57:37.963 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Eliminado: C:\Users\alber\IdeaProjects\ArtDownloader\ArtDownloader\Linux
 13:57:39.988 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Eliminado: C:\Users\alber\IdeaProjects\ArtDownloader\ArtDownloader\Linux
 13:57:41.863 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Eliminado: C:\Users\alber\IdeaProjects\ArtDownloader\ArtDownloader\linux2
+
 14:39:03.074 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
 14:39:04.690 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
 14:39:09.065 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
@@ -286,3 +287,4 @@
 23:47:56.210 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz iniciada
 23:48:07.459 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Cancelado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
 23:49:55.633 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz finalizada
+

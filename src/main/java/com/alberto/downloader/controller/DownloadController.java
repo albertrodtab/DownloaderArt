@@ -56,7 +56,9 @@ public class DownloadController implements Initializable {
         try {
             downloadTask = new DownloadTask(urlText, file);
 
+
             pbProgress.progressProperty().unbind();
+
             pbProgress.progressProperty().bind(downloadTask.progressProperty());
 
             downloadTask.stateProperty().addListener((observableValue, oldState, newState) -> {
@@ -72,9 +74,14 @@ public class DownloadController implements Initializable {
                     alert.show();
                   }
             });
+
             downloadTask.messageProperty()
                     .addListener((observableValue, oldValue, newValue) -> lbStatus.setText(newValue));
             new Thread(downloadTask).start();
+
+            downloadTask.messageProperty().addListener((observableValue, oldValue, newValue) -> lbStatus.setText(newValue));
+            new Thread(downloadTask).start();;
+
 
         }catch (MalformedURLException murle) {
             murle.printStackTrace();
