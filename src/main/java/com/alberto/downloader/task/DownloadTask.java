@@ -13,6 +13,10 @@ import java.net.URL;
 import java.net.URLConnection;
 import java.text.DecimalFormat;
 
+import java.time.Duration;
+import java.time.Instant;
+
+
 public class DownloadTask extends Task<Integer> {
 
     private URL url;
@@ -27,6 +31,7 @@ public class DownloadTask extends Task<Integer> {
     }
 
     @Override
+
     protected Integer call() throws Exception {
         logger.info("Descarga " + url.toString() + " iniciada");
         updateMessage("Conectando con el servidor . . .");
@@ -41,10 +46,14 @@ public class DownloadTask extends Task<Integer> {
         }
         BufferedInputStream in = new BufferedInputStream(url.openStream());
         FileOutputStream fileOutputStream = new FileOutputStream(file);
-        byte[] dataBuffer = new byte[1024];
+
+        byte dataBuffer[] = new byte[1024];
         int bytesRead;
         int totalRead = 0;
         double downloadProgress = 0;
+        Instant start = Instant.now();
+        Instant current;
+        float elapsedTime;
 
         while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
             downloadProgress = ((double) totalRead / fileSize);
@@ -75,4 +84,5 @@ public class DownloadTask extends Task<Integer> {
         logger.info("Descarga " + url.toString() + " finalizada");
         return null;
     }
+
 }
