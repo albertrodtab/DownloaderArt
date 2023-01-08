@@ -12,6 +12,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.text.DecimalFormat;
+import java.time.Duration;
+import java.time.Instant;
 
 public class DownloadTask extends Task<Integer> {
 
@@ -26,7 +28,7 @@ public class DownloadTask extends Task<Integer> {
         this.file = file;
     }
 
-    @Override
+   @Override
     protected Integer call() throws Exception {
         logger.info("Descarga " + url.toString() + " iniciada");
         updateMessage("Conectando con el servidor . . .");
@@ -41,19 +43,26 @@ public class DownloadTask extends Task<Integer> {
         }
         BufferedInputStream in = new BufferedInputStream(url.openStream());
         FileOutputStream fileOutputStream = new FileOutputStream(file);
-        byte[] dataBuffer = new byte[1024];
+        byte dataBuffer[] = new byte[1024];
         int bytesRead;
         int totalRead = 0;
         double downloadProgress = 0;
+        Instant start = Instant.now();
+        Instant current;
+        float elapsedTime;
 
         while ((bytesRead = in.read(dataBuffer, 0, 1024)) != -1) {
             downloadProgress = ((double) totalRead / fileSize);
+
+            current = Instant.now();
+            elapsedTime = Duration.between(start, current).toSeconds();
             updateProgress(downloadProgress, 1);
 
-            DecimalFormat df = new DecimalFormat("##.##");
-            df.setRoundingMode(RoundingMode.DOWN);
+            //esto era lo que tenía yo para calcular el porcentaje
+            /*DecimalFormat df = new DecimalFormat("##.##");
+            df.setRoundingMode(RoundingMode.DOWN);*/
 
-            updateMessage(totalRead/1000000 + " MB / " + df.format(downloadProgress * 100) + " %");
+            updateMessage(Math.round(downloadProgress * 100) + " %\t\t\t\t" + Math.round(elapsedTime)+" sec.");
 
             //comentar esta linea para que la descarga se produzca a la velocidad normal, esto ralentiza la velocidad de descarga.
             Thread.sleep(1);
@@ -75,4 +84,5 @@ public class DownloadTask extends Task<Integer> {
         logger.info("Descarga " + url.toString() + " finalizada");
         return null;
     }
+
 }
