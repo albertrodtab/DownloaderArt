@@ -285,3 +285,4 @@
 23:47:56.205 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
 23:47:56.210 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz iniciada
 23:48:07.459 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Cancelado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
+23:49:55.633 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz finalizada
