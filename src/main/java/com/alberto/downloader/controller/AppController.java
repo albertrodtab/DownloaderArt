@@ -11,15 +11,20 @@ import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.stage.DirectoryChooser;
+import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import java.awt.*;
+import java.io.BufferedReader;
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 
 public class AppController {
@@ -27,10 +32,13 @@ public class AppController {
     public TextField tfUrl;
     public Button btDownload;
     public TabPane tpDownloads;
+    //Esto me permite controlar el número de descargas concurrentes que se ejecutaran a la vez
+    //Si se lanza más descargas de las que el programa puede ejecutar a la vez, quedaran en espera hasta que puedan
+    //ser ejecutadas porque una de las anteriores ha terminado.
+    public ExecutorService executor = Executors.newFixedThreadPool(2);
 
     //esto me servirá para ir guardando todas las descargas que se lancen.
     private Map<String, DownloadController> allDownloads;
-
 
     @FXML
     private ScrollPane scrollPane;
@@ -70,7 +78,8 @@ public class AppController {
         try {
             FXMLLoader loader = new FXMLLoader();
             loader.setLocation(R.getUi("download.fxml"));
-            DownloadController downloadController = new DownloadController(url, this.file);
+
+            DownloadController downloadController = new DownloadController(url, this.file, executor);
 
             loader.setController(downloadController);
             VBox downloadBox = loader.load();
@@ -108,6 +117,24 @@ public class AppController {
         Desktop desktop = Desktop.getDesktop();
         File log = new File("C:/Users/alber/IdeaProjects/ArtDownloader/ArtDownloader.log");
         desktop.open(log);
+    }
+
+    @FXML
+    public void readDLC() {
+        FileChooser fileChooser = new FileChooser();
+        File selectedFile = fileChooser.showOpenDialog(null);
+        if (selectedFile == null)
+            return;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(selectedFile))) {
+            String line;
+            while ((line = reader.readLine()) != null)
+                launchDownload(line, file);
+
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 
