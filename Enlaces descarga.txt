@@ -1,3 +1,8 @@
 https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
 https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz
 https://png.pngtree.com/png-clipart/20210309/original/pngtree-christmas-christmas-cartoon-joyful-christmas-png-image_5909752.jpg
+
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4
+http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4
+https://raw.githubusercontent.com/LearnWebCode/json-example/master/animals-1.json
