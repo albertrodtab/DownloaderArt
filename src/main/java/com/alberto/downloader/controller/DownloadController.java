@@ -160,11 +160,13 @@ public class DownloadController implements Initializable {
         }
     }
 
-    //ToDo pte de revisar que pare todas las task no solo la activa en pantalla.
+
     public void stopAll() {
         if (downloadTask != null) {
             if (timeline.getStatus() == Animation.Status.RUNNING) {
                 timeline.stop();
+                logger.info("Cancelado: " + urlText);
+                downloadTask.cancel();
             }
             pbProgress.progressProperty().unbind();
             pbProgress.setProgress(0);

@@ -18,17 +18,20 @@ Otras funcionalidades (1 pto cada una)
 - La aplicación podrá leer listas de enlaces de un fichero de texto y encolará las
 descargas
 
-
+###### ** NO IMPLEMENTADO**
 - Posibilidad de configurar número máximo de descargas simultáneas
 
 ##### **IMPLEMENTADO**
 - Al cancelar la descarga, opcionalmente para el usuario, se podrá eliminar el fichero
 que se estaba descargando o se había descargado
 
+###### ** NO IMPLEMENTADO**
 - Al iniciar la aplicación se mostrará un SplashScreen
 
+###### ** NO IMPLEMENTADO**
 - Posibilidad de reanudar descargas canceladas previamente
 
+##### **IMPLEMENTADO**
 - Si el usuario asi lo selecciona, que elija la ubicación de la descarga en el mismo
 momento en que esta inicia, saltándose entonces la que haya configurada en la
 aplicación
@@ -38,6 +41,7 @@ aplicación
 pueda lanzar más descargas y estas queden encoladas esperando el momento en que
 puedan ser lanzadas
 
+###### ** NO IMPLEMENTADO**
 - Mostrar la velocidad de descarga (MB/s) en todo momento
 
 ##### **IMPLEMENTADO**

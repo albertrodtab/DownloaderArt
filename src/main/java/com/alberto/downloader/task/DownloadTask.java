@@ -41,8 +41,8 @@ public class DownloadTask extends Task<Integer> {
 
         //corregido un bug que no dejaba funcionar bien la barra de progreso, me faltaba el 0 por lo qu no
         //calculaba bien los megas y daba continuamente un valor negativo.
-        double megaSize = fileSize / 10485760;
-        if (megaSize > 10){
+        double megaSize = fileSize / 20971520;
+        if (megaSize > 20){
             logger.trace("Máximo tamaño de fichero alcanzado");
             throw new Exception("Max. size");
         }
@@ -64,11 +64,14 @@ public class DownloadTask extends Task<Integer> {
             //una forma de mostrar la evolución.
             //updateMessage(Math.round(downloadProgress * 100) + " %\t\t\t\t" + Math.round(downloadProgress*megaSize) + " de " + Math.round(megaSize) + "MB");
 
+            current = Instant.now();
+            elapsedTime = Duration.between(start, current).toSeconds();
+            updateMessage(Math.round(downloadProgress * 100) + " %\t\t" + Math.round(downloadProgress * megaSize) + " de " + Math.round(megaSize) + "MB\t\t" + Math.round(elapsedTime) + "sec.");
             //otra forma de mostrar la evolución.
-            DecimalFormat df = new DecimalFormat("##.##");
+            /*DecimalFormat df = new DecimalFormat("##.##");
             df.setRoundingMode(RoundingMode.DOWN);
 
-            updateMessage(totalRead/1000000 + " MB / " + df.format(downloadProgress * 100) + " %");
+            updateMessage(totalRead/1000000 + " MB / " + df.format(downloadProgress * 100) + " %");*/
 
             //comentar esta linea para que la descarga se produzca a la velocidad normal, esto ralentiza la velocidad de descarga.
             Thread.sleep(1);
