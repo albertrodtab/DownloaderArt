@@ -39,7 +39,9 @@ public class DownloadTask extends Task<Integer> {
         URLConnection urlConnection = url.openConnection();
         double fileSize = urlConnection.getContentLength();
 
-        double megaSize = fileSize / 1048576;
+        //corregido un bug que no dejaba funcionar bien la barra de progreso, me faltaba el 0 por lo qu no
+        //calculaba bien los megas y daba continuamente un valor negativo.
+        double megaSize = fileSize / 10485760;
         if (megaSize > 10){
             logger.trace("Máximo tamaño de fichero alcanzado");
             throw new Exception("Max. size");
@@ -59,6 +61,10 @@ public class DownloadTask extends Task<Integer> {
             downloadProgress = ((double) totalRead / fileSize);
             updateProgress(downloadProgress, 1);
 
+            //una forma de mostrar la evolución.
+            //updateMessage(Math.round(downloadProgress * 100) + " %\t\t\t\t" + Math.round(downloadProgress*megaSize) + " de " + Math.round(megaSize) + "MB");
+
+            //otra forma de mostrar la evolución.
             DecimalFormat df = new DecimalFormat("##.##");
             df.setRoundingMode(RoundingMode.DOWN);
 

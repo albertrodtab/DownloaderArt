@@ -288,3 +288,78 @@
 23:48:07.459 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Cancelado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
 23:49:55.633 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz finalizada
 
+00:09:55.520 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
+00:09:57.260 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+00:10:01.959 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+00:10:01.971 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz iniciada
+00:18:55.116 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz finalizada
+00:21:32.723 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
+00:21:34.252 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+00:21:49.247 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+00:21:49.253 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz iniciada
+00:26:31.115 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
+00:26:32.499 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+00:26:45.345 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+00:26:45.351 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz iniciada
+00:27:00.973 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
+00:27:27.089 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.AppController - Inicio parar todas las descargas
+00:27:27.089 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.AppController - Fin parar todas las descargas
+00:27:28.755 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.AppController - Inicio parar todas las descargas
+00:27:28.755 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.AppController - Fin parar todas las descargas
+00:27:33.743 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.AppController - Inicio parar todas las descargas
+00:27:33.743 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.AppController - Fin parar todas las descargas
+00:27:34.906 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Cancelado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
+00:27:37.168 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Eliminado: C:\Users\alber\Desktop\ArtDownloader\linux.exe
+00:32:14.597 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz finalizada
+11:51:43.620 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz
+11:51:53.343 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+11:52:10.236 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+11:52:10.240 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz iniciada
+11:52:13.227 [Thread-3] TRACE com.alberto.downloader.task.DownloadTask - Máximo tamaño de fichero alcanzado
+11:52:23.150 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Cancelado: https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz
+11:52:37.076 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
+11:52:38.621 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+11:52:43.806 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+11:52:43.807 [Thread-5] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz iniciada
+11:57:19.230 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Cancelado: https://git.kernel.org/torvalds/t/linux-5.16-rc4.tar.gz
+12:09:44.193 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://www.youtube.com/watch?v=C9hy_DLZL8A&ab_channel=FIVdeVilalba
+12:10:38.452 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+12:10:52.763 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+12:10:52.767 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://www.youtube.com/watch?v=C9hy_DLZL8A&ab_channel=FIVdeVilalba iniciada
+12:10:56.649 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://www.youtube.com/watch?v=C9hy_DLZL8A&ab_channel=FIVdeVilalba finalizada
+12:12:10.059 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://www.youtube.com/watch?v=C9hy_DLZL8A&ab_channel=FIVdeVilalba
+12:12:12.664 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+12:12:17.706 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+12:12:17.707 [Thread-5] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://www.youtube.com/watch?v=C9hy_DLZL8A&ab_channel=FIVdeVilalba iniciada
+12:12:24.469 [Thread-5] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://www.youtube.com/watch?v=C9hy_DLZL8A&ab_channel=FIVdeVilalba finalizada
+12:14:11.261 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+12:14:15.576 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+12:14:24.945 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+12:14:24.949 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4 iniciada
+12:14:25.620 [Thread-3] TRACE com.alberto.downloader.task.DownloadTask - Máximo tamaño de fichero alcanzado
+12:14:30.760 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Cancelado: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4
+12:14:48.151 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4
+12:14:50.167 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+12:14:55.923 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+12:14:55.924 [Thread-5] INFO  com.alberto.downloader.task.DownloadTask - Descarga http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4 iniciada
+12:14:56.139 [Thread-5] TRACE com.alberto.downloader.task.DownloadTask - Máximo tamaño de fichero alcanzado
+12:20:41.695 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4
+12:20:42.827 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+12:20:48.566 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+12:20:48.569 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4 iniciada
+12:21:35.408 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz
+12:21:41.475 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+12:21:48.475 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+12:21:48.477 [Thread-5] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz iniciada
+12:22:12.320 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Cancelado: https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz
+12:22:15.595 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Cancelado: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4
+12:23:25.119 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz
+12:23:28.057 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+12:23:36.181 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+12:23:36.185 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz iniciada
+12:30:02.786 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga https://cdn.kernel.org/pub/linux/kernel/v4.x/linux-4.4.294.tar.xz finalizada
+12:31:33.695 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Creado: http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4
+12:31:36.464 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Inicio proceso descarga, escoge donde guardarla
+12:31:42.193 [JavaFX Application Thread] INFO  com.alberto.downloader.controller.DownloadController - Fin de proceso de escoger donde guardar la descarga
+12:31:42.197 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4 iniciada
+12:31:55.570 [Thread-3] INFO  com.alberto.downloader.task.DownloadTask - Descarga http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4 finalizada
