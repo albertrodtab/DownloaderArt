@@ -9,3 +9,38 @@ Requisitos (1 pto cada uno, obligatorios)
 - Todas las descargas deben poderse cancelar y eliminar de la ventana de la aplicación
 - La ruta donde se descargan los ficheros, que será fija, se podrá configurar desde la aplicación
 - Se mantendrá un historial de todos los ficheros descargados por la aplicación y todas las descargas fallidas/canceladas. Este fichero se almacenará como fichero de registro y podrá consultarse desde el interfaz de usuario
+
+Otras funcionalidades (1 pto cada una)
+##### **IMPLEMENTADO**
+- Programar el comienzo de una descarga para un momento determinado.
+
+##### **IMPLEMENTADO**
+- La aplicación podrá leer listas de enlaces de un fichero de texto y encolará las
+descargas
+
+
+- Posibilidad de configurar número máximo de descargas simultáneas
+
+##### **IMPLEMENTADO**
+- Al cancelar la descarga, opcionalmente para el usuario, se podrá eliminar el fichero
+que se estaba descargando o se había descargado
+
+- Al iniciar la aplicación se mostrará un SplashScreen
+
+- Posibilidad de reanudar descargas canceladas previamente
+
+- Si el usuario asi lo selecciona, que elija la ubicación de la descarga en el mismo
+momento en que esta inicia, saltándose entonces la que haya configurada en la
+aplicación
+
+##### **IMPLEMENTADO**
+- En el caso de que haya límite de descargas y este haya sido superado, que el usuario
+pueda lanzar más descargas y estas queden encoladas esperando el momento en que
+puedan ser lanzadas
+
+- Mostrar la velocidad de descarga (MB/s) en todo momento
+
+##### **IMPLEMENTADO**
+- Realizar el seguimiento del proyecto utilizando la plataforma GitHub
+para almacenar el código y gestionando las issues (bug, mejoras, . . .) a medida que
+se vaya trabajando en él

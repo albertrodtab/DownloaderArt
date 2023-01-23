@@ -24,6 +24,19 @@
       </TextField>
       <VBox alignment="TOP_CENTER" prefHeight="328.0" prefWidth="375.0">
          <children>
+            <Label fx:id="lbDelay" text="Introduce el tiempo de espera para iniciar la descarga">
+               <VBox.margin>
+                  <Insets top="5.0" />
+               </VBox.margin>
+            </Label>
+            <TextField fx:id="delay">
+               <VBox.margin>
+                  <Insets bottom="20.0" top="5.0" />
+               </VBox.margin>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </TextField>
             <VBox prefHeight="54.0" prefWidth="352.0">
                <children>
                   <HBox alignment="CENTER">

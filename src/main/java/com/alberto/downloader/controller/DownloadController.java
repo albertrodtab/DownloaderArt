@@ -2,6 +2,7 @@ package com.alberto.downloader.controller;
 
 import com.alberto.downloader.task.DownloadTask;
 import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.concurrent.Worker;
 import javafx.event.ActionEvent;
@@ -12,6 +13,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ProgressBar;
 import javafx.scene.control.TextField;
 import javafx.stage.FileChooser;
+import javafx.util.Duration;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -34,8 +36,8 @@ public class DownloadController implements Initializable {
     private File defaultFile;
     private File file;
     private AppController controler;
-    private ExecutorService exec;
     private Timeline timeline = new Timeline();
+    private ExecutorService exec;
 
     private static final Logger logger = LogManager.getLogger(DownloadController.class);
 
@@ -44,18 +46,18 @@ public class DownloadController implements Initializable {
         tfUrl.setText(urlText);
     }
 
-    public DownloadController(String urlText, File defaultFile) {
+    public DownloadController(String urlText, File defaultFile, ExecutorService executor) {
         //recojo el texto del enlace y lo muestro en la caja de texto de la pantalla de descarga.
         logger.info("Creado: " + urlText);
         this.urlText = urlText;
         this.defaultFile = defaultFile;
+        this.exec = executor;
 
     }
 
         public void start(){
         try {
             downloadTask = new DownloadTask(urlText, file);
-
 
             pbProgress.progressProperty().unbind();
 
@@ -77,10 +79,13 @@ public class DownloadController implements Initializable {
 
             downloadTask.messageProperty()
                     .addListener((observableValue, oldValue, newValue) -> lbStatus.setText(newValue));
-            new Thread(downloadTask).start();
+            // con esto cada vez que invoco el método start lanzo un hilo de manera manual.
+            //new Thread(downloadTask).start();
 
-            downloadTask.messageProperty().addListener((observableValue, oldValue, newValue) -> lbStatus.setText(newValue));
-            new Thread(downloadTask).start();;
+            //Si llamo al execute él se encargará de lanzar la tarea y controlar que se ejecuten de manera
+            //concurrente tantas como yo haya definido al declarar el execute.
+            exec.execute(downloadTask);
+
 
 
         }catch (MalformedURLException murle) {
@@ -96,7 +101,7 @@ public class DownloadController implements Initializable {
     @FXML
     public void start(ActionEvent event) {
         //Esto me permite elegir el directorio donde deseo guardar la descarga, si el usuario
-        //no lo cambia se descargara en el directorio establecido por defecto en la aplicación
+        //no lo cambia se descargará en el directorio establecido por defecto en la aplicación
         logger.info("Inicio proceso descarga, escoge donde guardarla");
         FileChooser fileChooser = new FileChooser();
         fileChooser.setInitialDirectory(defaultFile);
@@ -104,9 +109,37 @@ public class DownloadController implements Initializable {
         if (file == null)
             return;
         logger.info("Fin de proceso de escoger donde guardar la descarga");
-        start();
+        int delayTime = delay();
+        logger.info("Retraso de la descarga");
 
+        if (delayTime == 0) {
+            start();
+        } else {
+            timeline = new Timeline (
+                    new KeyFrame(
+                            Duration.seconds(delayTime), actionEvent -> start()
+                    )
+            );
+            timeline.play();
+            logger.info("Fin retraso de la descarga");
+        }
+    }
 
+    //con esté método puedo hacer que el inicio de una descarga se retrase por el tiempo que yo elija.
+    public int delay() {
+        if (delay.getText().equals("")) {
+            return 0;
+        } else {
+            try {
+                if (Integer.parseInt(delay.getText()) > 0) {
+                    return Integer.parseInt(delay.getText());
+                } else {
+                    return 0;
+                }
+            } catch (NumberFormatException nfe) {
+                return 0;
+            }
+        }
     }
 
     //Este método me permite parar una única descarga, la que el usuario decida
